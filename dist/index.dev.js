@@ -35,4 +35,10 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
+if (slideIndex < 0) {
+  slideIndex += 1;
+} else {
+  slideIndex = (slideIndex + 1) % 4;
+}
 //# sourceMappingURL=index.dev.js.map
