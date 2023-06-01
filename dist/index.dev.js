@@ -31,8 +31,13 @@ function showSlides() {
   }
 
   slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active"; // Delay before transitioning to the next slide
-
+  dots[slideIndex - 1].className += " active";
   setTimeout(showSlides, 3500);
+}
+
+var images = document.getElementsByTagName('img');
+
+for (var i = 0; i < images.length; i++) {
+  images[i].setAttribute('draggable', 'false');
 }
 //# sourceMappingURL=index.dev.js.map
